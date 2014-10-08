@@ -131,4 +131,13 @@ public class InAppActivity extends Activity implements InAppListener {
 		}
 	}
 
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		if (inApp != null)
+			inApp.dispose();
+		inApp = null;
+	}
+
 }

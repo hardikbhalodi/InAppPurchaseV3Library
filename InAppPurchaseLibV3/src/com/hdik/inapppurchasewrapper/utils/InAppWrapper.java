@@ -259,4 +259,10 @@ public class InAppWrapper {
 			return false;
 		return mHelper.handleActivityResult(requestCode, resultCode, data);
 	}
+
+	public void dispose() {
+		if (mHelper != null)
+			mHelper.dispose();
+		mHelper = null;
+	}
 }
